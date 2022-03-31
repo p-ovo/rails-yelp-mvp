@@ -1,3 +1,12 @@
 <h2>
-<%= @restaurant.name %>
-</h2>
+Restaurant Name: <br>
+  <%= @restaurant.name %> </h2>
+
+<p>  Reviews <br>
+  <% @restaurant.reviews.each do |review| %>
+  <%= @restaurant.reviews.index(review) + 1 %>. Rating:
+  <%= review.rating %>
+  <br>
+  <%= review.content %> <br>
+  <% end %>
+</p>
