@@ -1,0 +1,4 @@
+<h2><% @restaurants.each do |item| %>
+<%= @restaurants.index(item) + 1 %>. <%= item.name %><br>
+<% end %>
+</h2>

@@ -11,9 +11,10 @@
     name: Faker::Restaurant.name,
     address: Faker::Address.full_address,
     phone_number: Faker::PhoneNumber.phone_number,
-    category: Faker::Restaurant.type
+    category: %w[chinese italian japanese french belgian].sample
   )
   puts 'created one restaurant'
+  rest1.save
 end
 
 # 4.times do
